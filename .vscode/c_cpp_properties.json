@@ -1,0 +1,23 @@
+{
+    "env": {
+        "cygwinInstall": "c:\\Software\\cygwin"
+    },
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                //"c:\\Software\\cygwin\\usr\\include", "C:\\Software\\cygwin\\lib\\gcc\\x86_64-pc-cygwin\\10\\include"
+                "${cygwinInstall}\\usr\\include", "${cygwinInstall}\\lib\\gcc\\x86_64-pc-cygwin\\10\\include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.14393.0",
+            "compilerPath": "${cygwinInstall}\\bin\\gcc.exe",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

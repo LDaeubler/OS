@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"terminal.integrated.allowChords": false,
+		"files.associations": {
+			"types.h": "c",
+			"unistd.h": "c",
+			"ostream": "cpp"
+		}
+	}
+}

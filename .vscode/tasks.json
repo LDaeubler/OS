@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build program (cygwin)",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-g",
+          "-o",
+          "build/${fileBasenameNoExtension}",
+          "${file}"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [
+          "$gcc"
+        ]
+      },
+      {
+        "label": "run programn",
+        "type": "shell",
+        "command": "build\\${fileBasenameNoExtension}.exe",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "build program"
+        ],
+        "args": [
+          ""
+        ],
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        },
+        "problemMatcher": []
+      },
+      {
+        "type": "cppbuild",
+        "label": "C/C++: gcc.exe build active file",
+        "command": "c:\\Software\\cygwin\\bin\\gcc.exe",
+        "args": [
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "c:\\Software\\cygwin\\bin"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: c:\\Software\\cygwin\\bin\\gcc.exe"
+      }
+    ]
+  }

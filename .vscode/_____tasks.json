@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build program (cygwin)",   // passt 26.11.2020
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-g",
+          "-o",
+          "build/${fileBasenameNoExtension}",
+          "${file}"
+        ],
+        "group": "build",
+        "problemMatcher": [
+          "$gcc"
+        ]
+      },
+      {
+        "label": "run programn",
+        "type": "shell",
+        "command": "build\\${fileBasenameNoExtension}.exe",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "build program"
+        ],
+        "args": [
+          ""
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "build c++ program",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-o",
+          "build/${fileBasenameNoExtension}",
+          "${relativeFileDirname}/*.cpp"
+        ],
+        "group": "build"
+      },
+      {
+        "label": "run c++ program",
+        "type": "shell",
+        "command": "build\\${fileBasenameNoExtension}.exe",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "build c++ program"
+        ],
+        "args": [
+          ""
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
