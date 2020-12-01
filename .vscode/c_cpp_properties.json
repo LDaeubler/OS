@@ -7,7 +7,8 @@
             "name": "Win32",
             "includePath": [
                 //"c:\\Software\\cygwin\\usr\\include", "C:\\Software\\cygwin\\lib\\gcc\\x86_64-pc-cygwin\\10\\include"
-                "${cygwinInstall}\\usr\\include", "${cygwinInstall}\\lib\\gcc\\x86_64-pc-cygwin\\10\\include"
+                "${cygwinInstall}\\usr\\include", "${cygwinInstall}\\lib\\gcc\\x86_64-pc-cygwin\\10\\include",
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",

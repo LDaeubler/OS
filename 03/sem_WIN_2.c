@@ -50,8 +50,7 @@ int main( void )
     // print thread history
     for (i = 0; i < THREADCOUNT; i++) {
         printf("%s \n", history[i]);
-    }
-    
+    }  
     return 0;
 }
 
@@ -99,7 +98,6 @@ DWORD WINAPI ThreadProc( LPVOID lpParam )
                 threadHistory[len + 1] = '\0'; // terminate with 0
                 break; 
         }
-    }
-    
+    }   
     return TRUE;
 }
