@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "build program (cygwin)",
+        "label": "build program (cygwin gcc)",
         "type": "shell",
         "command": "gcc",
         "args": [
@@ -39,23 +39,40 @@
         "problemMatcher": []
       },
       {
-        "type": "cppbuild",
-        "label": "C/C++: gcc.exe build active file",
-        "command": "c:\\Software\\cygwin\\bin\\gcc.exe",
+        "label": "build c++ program",
+        "type": "shell",
+        "command": "g++",
         "args": [
-          "-g",
-          "${file}",
           "-o",
-          "${fileDirname}\\${fileBasenameNoExtension}.exe"
-        ],
-        "options": {
-          "cwd": "c:\\Software\\cygwin\\bin"
-        },
-        "problemMatcher": [
-          "$gcc"
+          "build/${fileBasenameNoExtension}",
+          "${relativeFileDirname}/*.cpp"
         ],
         "group": "build",
-        "detail": "compiler: c:\\Software\\cygwin\\bin\\gcc.exe"
+        "problemMatcher": [
+          "$gcc"
+        ]
+      },
+      {
+        "label": "run c++ program",
+        "type": "shell",
+        "command": "build\\${fileBasenameNoExtension}.exe",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "build c++ program"
+        ],
+        "args": [
+          ""
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        },
+        "problemMatcher": []
       }
     ]
   }
