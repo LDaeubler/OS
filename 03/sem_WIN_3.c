@@ -1,6 +1,6 @@
-#include <windows.h> //CreateSemaphore, CreateThread, WaitForSingleObject, CloseHandle, ReleaseSemaphore
+#include <windows.h> //CreateThread, WaitForSingleObject, CloseHandle, Critical-Section-Funktionen
 #include <stdio.h> //printf, fprint, fgets, fclose, fopen
-#include <assert.h>
+#include <assert.h> // assert
 
 // !!!!! Prozess global 
 CRITICAL_SECTION gCS;
