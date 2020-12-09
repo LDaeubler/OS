@@ -1,4 +1,7 @@
 
+# ignore build folder
+build
+
 03/sem_WIN_2-1.c
 sem_WIN_2-1.exe.stackdump
 *.stackdump
