@@ -1,0 +1,29 @@
+/*
+  Benötigt die Erweiterung "Commands" von Fabio Spampinato.
+  1. Command anlegen
+  2. Commands aktualisieren
+  Siehe: https://github.com/fabiospampinato/vscode-commands
+*/
+
+{
+  "commands": [
+    {
+      "text": "$(chevron-right) C",
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["run c program"],
+      "tooltip": "Build&Run with C Compiler"
+    },
+    {
+      "text": "$(chevron-right) C++",
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["run c++ program"],
+      "tooltip": "Build&Run with C++ Compiler"
+    },
+    {
+      "command": "commands.refresh",
+      "text": "$(sync)",
+      "tooltip": "Refresh commands",
+      "color": "#FFCC00"
+    }
+  ]
+}

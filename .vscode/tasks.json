@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "build program (cygwin gcc)",
+        "label": "build gcc",
         "type": "shell",
         "command": "gcc",
         "args": [
@@ -20,12 +20,12 @@
         ]
       },
       {
-        "label": "run programn",
+        "label": "run c program",
         "type": "shell",
         "command": "build\\${fileBasenameNoExtension}.exe",
         "dependsOrder": "sequence",
         "dependsOn": [
-          "build program"
+          "build gcc"
         ],
         "args": [
           ""
@@ -39,7 +39,7 @@
         "problemMatcher": []
       },
       {
-        "label": "build c++ program",
+        "label": "build c++",
         "type": "shell",
         "command": "g++",
         "args": [
@@ -58,7 +58,7 @@
         "command": "build\\${fileBasenameNoExtension}.exe",
         "dependsOrder": "sequence",
         "dependsOn": [
-          "build c++ program"
+          "build c++"
         ],
         "args": [
           ""
