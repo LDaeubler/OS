@@ -8,8 +8,11 @@
         "args": [
           "-g",
           "-o",
-          "build/${fileBasenameNoExtension}",
-          "${file}"
+          "build/${fileBasenameNoExtension}.exe",
+          "-I",
+          "${relativeFileDirname}",
+          //"${file}"
+          "${relativeFileDirname}/${fileBasenameNoExtension}.c"
         ],
         "group": {
           "kind": "build",
@@ -22,7 +25,7 @@
       {
         "label": "run c program",
         "type": "shell",
-        "command": "build\\${fileBasenameNoExtension}.exe",
+        "command": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe", //${workspaceFolder} neu eingefügt.
         "dependsOrder": "sequence",
         "dependsOn": [
           "build gcc"
@@ -44,8 +47,8 @@
         "command": "g++",
         "args": [
           "-o",
-          "build/${fileBasenameNoExtension}",
-          "${relativeFileDirname}/*.cpp"
+          "build\\${fileBasenameNoExtension}.exe",
+          "${relativeFileDirname}\\*.cpp"
         ],
         "group": "build",
         "problemMatcher": [

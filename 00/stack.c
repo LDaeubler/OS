@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 int MyFunc(int parameter1, char parameter2)
@@ -10,6 +11,6 @@ int main(int argc, char *argv[])
 { 
     float local1 = 15.0; 
     MyFunc(7, '9');
-    printf("Hallo!");
+    printf("Hallo!\n");
     return 17;
 }
