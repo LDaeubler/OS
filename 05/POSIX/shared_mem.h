@@ -1,5 +1,5 @@
+#define BUFSIZE
 struct TEST {
-  char size;
-  int numbers[4]
-}
-  
+    char size;
+    int numbers[BUFSIZE];
+};
