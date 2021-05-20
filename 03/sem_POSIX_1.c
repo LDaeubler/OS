@@ -60,8 +60,7 @@ void* reader(void* arg)
 	sem_post(pSem); 
 	////////////////////////////////////////
 } 
-  
-  
+   
 int main() 
 { 
     sem_t sem;

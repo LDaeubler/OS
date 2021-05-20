@@ -7,7 +7,7 @@
 #define NUM_THREADS 5
 
 // beliebige Werte zwischen 1s und 10s
-int sleep_time[] = {2, 6, 1, 8, 5};
+int sleep_time[] = {2, 6, 1, 8, 5};  // Datensegment)
 
 void *perform_work(void *arguments){
   int index = *((int *)arguments); // arguments -> Casten -> Derefernzieren

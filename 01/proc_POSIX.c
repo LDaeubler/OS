@@ -12,7 +12,10 @@
 /*
    Posix-Schema
 */
+
 int main (void) {
+
+   int v = 0;
    printf("Entering parent %d (PID)\n", getpid());
    pid_t pid;
    // Die Switch Anweisung wird in zwei Prozessen ausgeführt.

@@ -48,7 +48,9 @@ int main(void)
 	assert(hThread != NULL);
 
 	// WaitForMultipleObjects(MAX_THREADS, hThreadArray, TRUE, INFINITE);
-	WaitForSingleObject(hThread, INFINITE);   
+	WaitForSingleObject(hThread, INFINITE);
+	// WaitForSingleObject(hThread, 200);
+	   
 	CloseHandle(hThread);
 	
 	return 0;
@@ -61,6 +63,7 @@ DWORD WINAPI MyThreadProc(LPVOID lpParameter)
 	PARAM *pData = (PARAM *) lpParameter;
 	// printf is NOT thread safe --> chaotic Terminal Output possible
 	//-> es schreiben mehrer threads auf einer Konsole
+	// Sleep(500);
 	printf("--- passed data: %d ", pData->val1);
 	printf("%.4f ", pData->val2);
 	printf("%s", pData->text);

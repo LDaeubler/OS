@@ -1,3 +1,5 @@
+// NUR FUER Intelli Sense
+// siehe https://stackoverflow.com/questions/53973777/vscode-no-such-file-or-directory-when-running-c-code
 {
     "env": {
         "cygwinInstall": "c:\\Software\\cygwin"
@@ -8,7 +10,9 @@
             "includePath": [
                 //"c:\\Software\\cygwin\\usr\\include", "C:\\Software\\cygwin\\lib\\gcc\\x86_64-pc-cygwin\\10\\include"
                 "${cygwinInstall}\\usr\\include", "${cygwinInstall}\\lib\\gcc\\x86_64-pc-cygwin\\10\\include",
+                // "${workspaceFolder}"
                 "${workspaceFolder}/**"
+                
             ],
             "defines": [
                 "_DEBUG",
