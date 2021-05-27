@@ -9,7 +9,8 @@
 
 int main(void)
 {
-	int file_des = shm_open("/test2", O_CREAT | O_RDWR | O_EXCL, S_IRUSR | S_IWUSR ); //| S_IXGRP | S_IXOTH | S_IXUSR);
+	int file_des = shm_open("/test2", O_CREAT | O_RDWR, S_IRUSR | S_IWUSR ); 
+    // int file_des = shm_open("/test2", O_CREAT | O_RDWR | O_EXCL, S_IRUSR | S_IWUSR );
     printf("--- file des %i \n", file_des);
 	assert(file_des != -1);
     
@@ -21,7 +22,7 @@ int main(void)
                                           MAP_SHARED, file_des, 0);
     assert (shm != MAP_FAILED);
 
-	shm->size =4; // lasst sich bestimmt noch etwas intelligenter ermitteln ... 
+	shm->size = BUFSIZE; // lasst sich bestimmt noch etwas intelligenter ermitteln ... 
     int i = 0;
     while (i < 20) {
     	int count = i % shm->size;

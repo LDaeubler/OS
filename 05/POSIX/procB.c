@@ -8,7 +8,9 @@
 
 int main(void)
 {
-	int file_des = shm_open("/test2", O_RDONLY | O_RDWR, 0);
+	int file_des = shm_open("/test2", O_RDONLY, 0);
+    // int file_des = shm_open("/test2", O_RDONLY | O_RDWR, 0);
+    
     assert(file_des != -1);
     
 	/*int status = ftruncate(file_des, sizeof(struct TEST));
