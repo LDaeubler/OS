@@ -6,3 +6,4 @@ build
 sem_WIN_2-1.exe.stackdump
 *.stackdump
 
+*.exe
