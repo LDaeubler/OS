@@ -10,7 +10,6 @@
 int main(void)
 {
 	int file_des = shm_open("/test2", O_CREAT | O_RDWR, S_IRUSR | S_IWUSR ); 
-    // int file_des = shm_open("/test2", O_CREAT | O_RDWR | O_EXCL, S_IRUSR | S_IWUSR );
     printf("--- file des %i \n", file_des);
 	assert(file_des != -1);
     
